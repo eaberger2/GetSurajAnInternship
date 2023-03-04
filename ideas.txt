@@ -23,6 +23,7 @@ App features: Ability to create and delete savings accounts for roundup by type.
             the roudnup App can designate what account the roudnUP money goes to based on transaction type
             User has ability to change how much money the roundUP app takes
 
+UI:
 Home Page: 
     Overview: User can see an overview of the accounts and the total amount of money saved, 
     as well as a way to navigate to between differnt pages
@@ -36,6 +37,10 @@ Account Page:
 
 Transaction Overviews
     Shows recent transactions and their type
+
+BackEnd:
+Want to be able to sort transactions by type and deposit the money into the corret account
+Need to communicate with a database to save accounts
 
 
 
