@@ -4,14 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Transactions } from './Transactions';
 import { Categories } from './Categories';
-
-function Accounts() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Accounts</Text>
-    </View>
-  );
-}
+import { Accounts } from './Accounts';
 
 const Tab = createBottomTabNavigator();
 
