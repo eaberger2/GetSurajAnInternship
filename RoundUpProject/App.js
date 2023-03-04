@@ -11,6 +11,8 @@ export default function App() {
         <Button title="Overview of Accounts" onPress={() => console.log('Overview pressed')} />
         <Button title="Edit Accounts" onPress={() => console.log('Edit pressed')} />
         <Button title="View Accounts" onPress={() => console.log('View pressed')} />
+        <Button title="Create New" onPress={() => console.log('Create pressed')} />
+        <Button title="Total Saved" onPress={() => console.log('Total Saved pressed')} />
       </View>
       <StatusBar style="auto" />
     </View>
