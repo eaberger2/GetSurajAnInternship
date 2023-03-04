@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
 
-export function Account(name, total_amount) {
+export function Account(props) {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Categories</Text>
+        <Text>{props.name}</Text>
+        <Text>{props.amount}</Text>
       </View>
     );
   }
