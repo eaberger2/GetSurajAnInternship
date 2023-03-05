@@ -19,7 +19,7 @@ fs.readFile(sample, 'UTF-8', (err, fileContent) => {
         map1.set(data[i].Name, data[i].Sector)
     }
 
-    console.log("finished loop:" + map1.size)
+    console.log("finished making hashmap")
     resolve(map1)
     reject("fuckme")
 
@@ -28,9 +28,27 @@ fs.readFile(sample, 'UTF-8', (err, fileContent) => {
 });
 
 
+// p.then((map1) => {
+//     console.log("passed")
+//     console.log(map1.get('Aflac'))
+//     console.log(map1.size)
+//     console.log(map1.value)
+// });
+let sector = "unknown"
+const testInput = "./testInputTransactions.csv"
 p.then((map1) => {
-    console.log("passed")
-    console.log(map1.get('Aflac'))
-    console.log(map1.size)
-});
+fs.readFile(testInput, 'UTF-8', (err, fileContent) => {
+  if (err) { console.log(err); }
 
+  csv.toObjects(fileContent, {}, (err, data) => {
+    if (err) { console.log(err); }
+
+    for (let i = 0, len = data.length; i < len; i++) {
+        if (map1.has(data[i].name)){
+          sector = map1.get(datat[i].name)
+        }
+    }
+  });
+});
+return 
+});
