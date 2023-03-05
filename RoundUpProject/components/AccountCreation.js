@@ -60,16 +60,18 @@ export function AccountCreation() {
               <Picker.Item label="Luxary" value="Luxary" />
               <Picker.Item label="Utilites" value="Utilites" />
               <Picker.Item label="Transportation" value="Transporation" />
+              <Picker.Item label="Travel Savings" value="Travel Savings" />
+              <Picker.Item label="Non Profit" value="Non Profit" />
             </Picker>
             
-            <Text style={styles.formLabel}>
-              Selected: {catagory}
-            </Text>
             <Text style={styles.formLabel}>
               Selected: {name}
             </Text>
             <Text style={styles.formLabel}>
               Selected: {number}
+            </Text>
+            <Text style={styles.formLabel}>
+              Selected: {catagory}
             </Text>
 
             { <Button
@@ -89,27 +91,7 @@ export function AccountCreation() {
                 alert(number);
                 alert(catagory);
                 
-                /*
                 
-                execute()
-                
-                async function execute(){
-                    try{
-                        await client.connect()
-                        console.log("Connected successfully.");
-                        await client.query("insert into accounts values ($1, $2, $3, $4)",[2, name, number, catagory])
-                
-                        const {rows} = await client.query("select * from accounts")
-                
-                        console.table(rows)
-                    }catch (ex){
-                        console.log(`Something wrong happened ${ex}`)
-                    }finally{
-                        await client.end()
-                        console.log("Client disconnected successfully.")
-                    }
-                }
-                */
               }}
               
 

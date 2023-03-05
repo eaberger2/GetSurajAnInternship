@@ -17,8 +17,7 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen name="Accounts" component={Accounts} />
-        <Tab.Screen name="Transactions" component={Transactions} />
-        <Tab.Screen name="Categories" component={Categories} />
+        
         <Tab.Screen name="AccountCreation" component={AccountCreation} />
       </Tab.Navigator>
     </NavigationContainer>
