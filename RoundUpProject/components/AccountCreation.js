@@ -20,7 +20,7 @@ export function AccountCreation() {
     
     const [name, setChangeText] = React.useState('');
     const [number, setNumText] = React.useState('');
-    const [catagory, setcatagory] = useState('US Dollar');
+    const [catagory, setcatagory] = useState('');
     //const [name, o]
     return (
         <View style={styles.container}>
@@ -41,9 +41,9 @@ export function AccountCreation() {
             <Picker
               selectedValue={catagory}
               onValueChange={currentCatagory => setcatagory(currentCatagory)}>
-              <Picker.Item label="Food" value="food" />
-              <Picker.Item label="Bills" value="bills" />
-              <Picker.Item label="Clothes" value="clothes" />
+              <Picker.Item label="Food" value="Food" />
+              <Picker.Item label="Bills" value="Bills" />
+              <Picker.Item label="Clothes" value="Clothes" />
             </Picker>
             <Text style={styles.formLabel}>
               Selected: {catagory}
