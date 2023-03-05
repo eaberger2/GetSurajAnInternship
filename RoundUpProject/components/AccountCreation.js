@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Text, StyleSheet, View, TextInput, Button, navigate} from 'react-native';
+import { Text, StyleSheet, View, TextInput, Button} from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 //import { NavigationContainer } from '@react-navigation/native';
 //import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -14,13 +14,23 @@ number
 catagory
 
 */
+const {Client} = require('pg')
 
+const client = new Client({
+    host: "my-db-instance.chy9kvkccmc4.us-east-1.rds.amazonaws.com",
+    user: "postgres",
+    port: 5432,
+    password: "password",
+    database: "initial_db"
+})
 
 export function AccountCreation() {
     
     const [name, setChangeText] = React.useState(name);
     const [number, setNumText] = React.useState(number);
     const [catagory, setcatagory] = useState('');
+
+    
     //const [name, o]
     return (
         <View style={styles.container}>
@@ -59,7 +69,31 @@ export function AccountCreation() {
                 backgroundColor='#1E6738'
               color="#841584"
               onPress={() => {
-                alert('Simple Button pressed')
+                alert('Simple Button pressed');
+
+                
+                
+                
+                
+                execute()
+                
+                async function execute(){
+                    try{
+                        await client.connect()
+                        console.log("Connected successfully.");
+                        await client.query("insert into accounts values ($1, $2, $3, $4)",[2, name, number, catagory])
+                
+                        const {rows} = await client.query("select * from accounts")
+                
+                        console.table(rows)
+                    }catch (ex){
+                        console.log(`Something wrong happened ${ex}`)
+                    }finally{
+                        await client.end()
+                        console.log("Client disconnected successfully.")
+                    }
+                }
+
               }}
 
             //
@@ -118,3 +152,4 @@ const styles = StyleSheet.create({
         borderColor: '#fff'
     }
   });
+
