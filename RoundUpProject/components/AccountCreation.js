@@ -3,7 +3,7 @@ import { Text, StyleSheet, View, TextInput, Button} from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 //import { NavigationContainer } from '@react-navigation/native';
 //import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
+//sjtdrkgl;ij'ok[pl]
 /*Account name
 Accont Purchase : food, build, clothes
 Amount = 0
