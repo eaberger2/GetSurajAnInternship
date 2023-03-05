@@ -1,4 +1,4 @@
-const {Client} = require('pg')
+/*const {Client} = require('pg')
 
 const client = new Client({
     host: "my-db-instance.chy9kvkccmc4.us-east-1.rds.amazonaws.com",
@@ -27,3 +27,4 @@ async function execute(){
         console.log("Client disconnected successfully.")
     }
 }
+*/
