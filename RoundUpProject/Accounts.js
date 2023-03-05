@@ -4,7 +4,7 @@ import {Account} from './components/Account';
 
 export function Accounts() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 0.5 }}>
         <Account name="Savings" amount="$25,000"></Account>
         <Account name="Checking" amount="$35,000"></Account>
         <Account name="Non Profit" amount="$2,000"></Account>
