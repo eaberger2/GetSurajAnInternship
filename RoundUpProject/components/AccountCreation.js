@@ -58,7 +58,11 @@ export function AccountCreation() {
                 paddingBottom="10"
                 backgroundColor='#1E6738'
               color="#841584"
-              onPress={() => alert('Simple Button pressed')}
+              onPress={() => {
+                alert('Simple Button pressed')
+              }}
+
+            //
               //onPress={() => navigation.navigate('Details')}
             /> }
           </View>
