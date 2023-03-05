@@ -11,14 +11,13 @@ export function Accounts() {
         <Account name="Checking" amount="$35,000"></Account>
         <Account name="Non Profit" amount="$2,000"></Account>
 
-
         <Button
           onPress={AccountCreation}
           title="Learn More"
           color="#841584"
           accessibilityLabel="Learn more about this purple button"
-          href = "./components/AccountCreation"
-          component={AccountCreation} to="./components/AccountCreation"
+          //href = "./components/AccountCreation"
+          //component={AccountCreation} to="./components/AccountCreation"
         />
       </View>
     );
