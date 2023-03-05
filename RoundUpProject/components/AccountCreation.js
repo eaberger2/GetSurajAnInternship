@@ -14,6 +14,7 @@ number
 catagory
 
 */
+/*
 const {Client} = require('pg')
 
 const client = new Client({
@@ -23,11 +24,11 @@ const client = new Client({
     password: "password",
     database: "initial_db"
 })
-
+*/
 export function AccountCreation() {
     
-    const [name, setChangeText] = React.useState(name);
-    const [number, setNumText] = React.useState(number);
+    const [name, setName] = useState('');
+    const [number, setNumber] = useState('');
     const [catagory, setcatagory] = useState('');
 
     
@@ -38,13 +39,15 @@ export function AccountCreation() {
           <View>
             <TextInput placeholder="Account Name" 
                 style={styles.inputStyle} 
-                value={name}
+                selectedvalue={name}
+                onChangeText={setName}
             />
             <TextInput
               secureTextEntry={false}
               placeholder="Goal amount you want to reach"
               style={styles.inputStyle}
               value={number}
+              onChangeText={setNumber}
             />
             <Text style={styles.formLabel}> Choose a account catagory:</Text>
 
@@ -55,9 +58,17 @@ export function AccountCreation() {
               <Picker.Item label="Bills" value="Bills" />
               <Picker.Item label="Clothes" value="Clothes" />
             </Picker>
+            
             <Text style={styles.formLabel}>
               Selected: {catagory}
             </Text>
+            <Text style={styles.formLabel}>
+              Selected: {name}
+            </Text>
+            <Text style={styles.formLabel}>
+              Selected: {number}
+            </Text>
+
             { <Button
               title="Submit"
               //color="#fff"
@@ -69,11 +80,13 @@ export function AccountCreation() {
                 backgroundColor='#1E6738'
               color="#841584"
               onPress={() => {
-                alert('Simple Button pressed');
+                //alert('Simple Button pressed');
 
+                alert(name);
+                alert(number);
+                alert(catagory);
                 
-                
-                
+                /*
                 
                 execute()
                 
@@ -93,8 +106,9 @@ export function AccountCreation() {
                         console.log("Client disconnected successfully.")
                     }
                 }
-
+                */
               }}
+              
 
             //
               //onPress={() => navigation.navigate('Details')}
@@ -151,5 +165,6 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#fff'
     }
+    
   });
-
+  
