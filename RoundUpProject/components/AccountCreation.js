@@ -31,7 +31,7 @@ export function AccountCreation() {
     const [number, setNumber] = useState('');
     const [catagory, setcatagory] = useState('');
 
-    
+     
     //const [name, o]
     return (
         <View style={styles.container}>
