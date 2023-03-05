@@ -1,36 +1,65 @@
 import React, {useState} from 'react';
-import { Text, StyleSheet, View, TextInput, Button} from 'react-native';
+import { Text, StyleSheet, View, TextInput, Button, navigate} from 'react-native';
 import { Picker } from '@react-native-picker/picker';
+//import { NavigationContainer } from '@react-navigation/native';
+//import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+/*Account name
+Accont Purchase : food, build, clothes
+Amount = 0
+
+values:
+name
+number
+catagory
+
+*/
+
 
 export function AccountCreation() {
-    const [currency, setCurrency] = useState('US Dollar');
+    
+    const [name, setChangeText] = React.useState('');
+    const [number, setNumText] = React.useState('');
+    const [catagory, setcatagory] = useState('US Dollar');
+    //const [name, o]
     return (
         <View style={styles.container}>
           <Text style={styles.formLabel}> Account Creation </Text>
           <View>
-            <TextInput placeholder="Account Name" style={styles.inputStyle} />
-            <TextInput
-              secureTextEntry={true}
-              placeholder="Password"
-              style={styles.inputStyle}
+            <TextInput placeholder="Account Name" 
+                style={styles.inputStyle} 
+                value={name}
             />
-            <Text style={styles.formLabel}> Choose a Non-profit</Text>
+            <TextInput
+              secureTextEntry={false}
+              placeholder="Goal amount you want to reach"
+              style={styles.inputStyle}
+              value={number}
+            />
+            <Text style={styles.formLabel}> Choose a account catagory:</Text>
 
             <Picker
-              selectedValue={currency}
-              onValueChange={currentCurrency => setCurrency(currentCurrency)}>
-              <Picker.Item label="USD" value="US Dollars" />
-              <Picker.Item label="EUR" value="Euro" />
-              <Picker.Item label="NGN" value="Naira" />
+              selectedValue={catagory}
+              onValueChange={currentCatagory => setcatagory(currentCatagory)}>
+              <Picker.Item label="Food" value="food" />
+              <Picker.Item label="Bills" value="bills" />
+              <Picker.Item label="Clothes" value="clothes" />
             </Picker>
             <Text style={styles.formLabel}>
-              Selected: {currency}
+              Selected: {catagory}
             </Text>
             { <Button
               title="Submit"
               //color="#fff"
+               marginRight="40"
+                marginLef="40"
+                marginTop="10"
+                paddingTop="10"
+                paddingBottom="10"
+                backgroundColor='#1E6738'
               color="#841584"
-              onPress={() => alert('Simple Button pressed')}
+              //onPress={() => alert('Simple Button pressed')}
+              //onPress={() => navigation.navigate('Details')}
             /> }
           </View>
         </View>
@@ -85,4 +114,3 @@ const styles = StyleSheet.create({
         borderColor: '#fff'
     }
   });
-  
