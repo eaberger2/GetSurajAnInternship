@@ -18,8 +18,8 @@ catagory
 
 export function AccountCreation() {
     
-    const [name, setChangeText] = React.useState('');
-    const [number, setNumText] = React.useState('');
+    const [name, setChangeText] = React.useState(name);
+    const [number, setNumText] = React.useState(number);
     const [catagory, setcatagory] = useState('');
     //const [name, o]
     return (
@@ -58,7 +58,7 @@ export function AccountCreation() {
                 paddingBottom="10"
                 backgroundColor='#1E6738'
               color="#841584"
-              //onPress={() => alert('Simple Button pressed')}
+              onPress={() => alert('Simple Button pressed')}
               //onPress={() => navigation.navigate('Details')}
             /> }
           </View>
