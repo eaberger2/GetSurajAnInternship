@@ -31,5 +31,6 @@ fs.readFile(sample, 'UTF-8', (err, fileContent) => {
 p.then((map1) => {
     console.log("passed")
     console.log(map1.get('Aflac'))
+    console.log(map1.size)
 });
 
