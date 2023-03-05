@@ -15,9 +15,10 @@ async function execute(){
     try{
         await client.connect()
         console.log("Connected successfully.")
-        //await client.query("insert into account values (500, 'John')")
+        await client.query("insert into accounts values (1, 'John', 200, 'Food')")
 
-        const {rows} = await client.query("select * from account")
+        const {rows} = await client.query("select * from accounts")
+
         console.table(rows)
     }catch (ex){
         console.log(`Something wrong happened ${ex}`)
