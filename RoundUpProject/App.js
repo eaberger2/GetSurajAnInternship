@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Transactions } from './Transactions';
 import { Categories } from './Categories';
 import { Accounts } from './Accounts';
+import { AccountCreation } from './components/AccountCreation';
 
 const Tab = createBottomTabNavigator();
 
@@ -15,6 +16,8 @@ export default function App() {
         <Tab.Screen name="Accounts" component={Accounts} />
         <Tab.Screen name="Transactions" component={Transactions} />
         <Tab.Screen name="Categories" component={Categories} />
+        <Tab.Screen name="AccountCreation" component={AccountCreation} />
+        
       </Tab.Navigator>
     </NavigationContainer>
   );
