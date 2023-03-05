@@ -13,11 +13,11 @@ export function Accounts() {
 
         <Button
           onPress={AccountCreation}
-          title="Learn More"
+          title="Create An Account"
           color="#841584"
           accessibilityLabel="Learn more about this purple button"
           //href = "./components/AccountCreation"
-          //component={AccountCreation} to="./components/AccountCreation"
+          component={AccountCreation} to="./components/AccountCreation"
         />
       </View>
     );

@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
-import { Text, StyleSheet, View, TextInput, Button} from 'react-native';
+import { Text, StyleSheet, View, TextInput, Button, navigate} from 'react-native';
 import { Picker } from '@react-native-picker/picker';
+//import { NavigationContainer } from '@react-navigation/native';
+//import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 export function AccountCreation() {
     const [currency, setCurrency] = useState('US Dollar');
@@ -29,8 +31,15 @@ export function AccountCreation() {
             { <Button
               title="Submit"
               //color="#fff"
+               marginRight="40"
+                marginLef="40"
+                marginTop="10"
+                paddingTop="10"
+                paddingBottom="10"
+                backgroundColor='#1E6738'
               color="#841584"
-              onPress={() => alert('Simple Button pressed')}
+              //onPress={() => alert('Simple Button pressed')}
+              //onPress={() => navigation.navigate('Details')}
             /> }
           </View>
         </View>
@@ -85,4 +94,3 @@ const styles = StyleSheet.create({
         borderColor: '#fff'
     }
   });
-  
