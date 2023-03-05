@@ -28,6 +28,8 @@ function CategoryGen(props){
             return <Text style={styles.bills}>Bills</Text>
         case 'Food':
             return <Text style={styles.food}>Food</Text>
+        case 'SustainableShopping':
+            return <Text style={styles.sustain}>Sustainable Shopping</Text>
     }
 }
 
@@ -88,5 +90,8 @@ const styles = StyleSheet.create({
     color:'orange',
     backgroundColor:'white'
   },
-
+  sustain: {
+    color: 'green',
+    backgroundColor: 'white'
+  }
 });
