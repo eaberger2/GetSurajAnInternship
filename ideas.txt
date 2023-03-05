@@ -2,6 +2,7 @@ Fast way to push: git pull; git add -A; git commit -am "Adding stuff to app"; gi
 note: you might want to pull seperatly.
 
 https://medium.com/ovrsea/deploy-automatically-a-react-app-on-amazon-s3-iam-within-minutes-da6cb0096d55
+https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/postgresql-s3-export.html
 
 Sustainablity:
 Bank susttainblity tracker

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var fs = require('fs');
 var csv = require('jquery-csv');
 const sample = './companies.csv';
@@ -40,3 +41,21 @@ fs.readFile(sample, 'UTF-8', (err, fileContent) => {
 map1.set(testName, 000)
 console.log("map1 size: " + map1.size)
 console.log("myArray length:" + myArray.length)
+=======
+const fs = require('fs');
+const parse = require('csv-parse/lib/sync');
+
+const csvData = fs.readFileSync('companies.csv');
+const records = parse(csvData, { columns: true });
+
+const hashmap = {};
+for (let i = 0; i < records.length; i++) {
+  const record = records[i];
+  const name = record.name;
+  const category = record.category_list;
+  const countryCode = record.country_code;
+  hashmap[name] = { category, countryCode };
+}
+
+console.log(hashmap);
+>>>>>>> 1dc316e2813aabc33f353cd96e85b225457746d9
