@@ -1,5 +1,4 @@
 
-esu gp89i.=-/p
 Fast way to push: git pull; git add -A; git commit -am "Adding stuff to app"; git push
 note: you might want to pull seperatly.
 
